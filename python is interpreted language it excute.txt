@@ -1,0 +1,178 @@
+python is interpreted language it excutes the code line by line and it does not compile and run the progm at once and when it comes an error easy to detect and debug and does need sperate compliation like java and c++ 
+def code()
+    for i in range(len n):
+    
+        print ("hello program")
+        if (n > 2):
+          print("hello") 
+    return none    
+
+sets-unodered collection of objects 
+and removes the duplicate values
+sets are unique
+sets are mutable-you can add or remove the elements from a set usimg the add and remove methods
+sets are do not suport indexing and slicing
+fruits={"apple","banana","hello"}
+
+
+
+data structure is needed inoder to store and organize data effently
+list tuple and are built in data struture
+list-1.list are mutuable
+2.[]
+3.more memory effient 
+tuple-1.immutable
+2.{}
+3.faster 
+
+mutuable vs immutable
+mutable -can modfiy and add to alredy created object 
+immutable - cant add or modify elements if we does it create new object
+example String 
+
+dictinory-key value pair ,mutable
+
+list-oreder colllection of elements
+
+#convert string to int using single line
+a="5" print(int(a))
+#convert string to list using split function 
+str="hello"
+print(str.split(""))
+fucntion called by other parts of a program
+def add_number(num1,num2):
+    result=num1+num2
+    return result
+sum=add_number(num1,num2)
+
+
+slicing allow to get subset from list 
+
+leap year is 366 days  
+year=int(input("enter the year"))
+if (year % 400 == 0 ) and (year % 100 == 0):
+    print("{0} leap year")
+elif (year % 4 == 0) and (year % 100 !=0):
+    print("is leap year ")
+else:
+    print("not leaap year")
+amastrong number 
+153 = 1^3+3^3+5^3
+num=int(input("enter the number"))
+sum=0
+temp=num
+while temp > 0:
+    digit=temp%10 //153%10 gives 3 
+    sum=sum+(digit ** 3) // 3 cube 27 add to sum
+    temp=tem // 10 remove 3 left 15 and passs it over next iteration
+if num==sum :
+    print(num,"is amastrong number")
+else:
+    print(num,"is not an amstrong number")
+    
+def is_palindrome(n1):
+    first,end=0,len(n1)
+    while start < end :
+        if (n1[first]!=n1[end]):
+             return false
+        first+=1
+        end-=1
+    return True
+n1="malayalum"
+print(is_palindrome(n1))
+def reverse_string(n1):
+    first,end=0,len(n1)
+    n2=list(n1)
+    while first < end :
+         n2[first],n2[end]=n2[end],n2[first]
+         first=+1
+         end-=1
+    return "".join(n2)
+//prime number or not 
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2,int(num ** 0.5) + 1):
+        if num % i == 0 :
+            return False
+    return True
+//factorial of number
+memo={}
+def factorail_num(n):
+    if n == 0:
+        return 1
+    if n in memo:
+        return memo[n]
+    memo[n]=n*factorial_memory(n-1)
+    return memo[n]   
+   
+//rendom number generation   
+import random
+num=random.random()
+print(num)
+//generate random numbers in range
+import random
+num=random.uniform(1,100)
+print(num)
+//fibonaci serius
+def fibonaci(num):
+    a,b=0,1
+    if num < 1:
+        print("null")
+    elif num == 1:
+        print(a)
+    elif  num == 2:
+        print(a)
+        print(b)
+    elif num > 2:
+        print(a)
+        print(b)
+        for _ in range(num-2):
+            c=a+b
+            a,b=b,c
+            print(c)
+//recusion 
+def fibonaci(n):
+    if n <=1:
+        return n
+    return fibonaci(n-1)+fibonaci(n-2)
+module is simple a.py  that conatin python code and fucntion we can resue this file  using "import"
+import math
+module is collection of realted modules
+
+decorators:wraping of function with another fucntion which add the functinalites before and after fucntion called without modifying code it will call some fucntion before andafter calling function 
+try:
+    num=int(input("enter"))   
+expect valueerror:
+    print("this is not va;id number)
+finally:
+   print("finally number got excuted")
+== compare the values of two object
+is chaecks the identity means they pointing to the same object or not
+
+generators are need to used to generate the values only when needed instead of storing all calues in memory 
+
+normal function store all results in memory 
+generator proudces value at a time only when asked using yield keyowrd
+def my_generaotor():
+  yeild 1
+  
+def fibonaci(n):
+    a,b=0,1
+    while True:
+        yield a
+        a,b=b,a+b
+gen=fibonaci()
+for _ in range(5):
+      print(next(gen))
+      
+shallow copy and deep copy 
+in python deep copy and shollow copy are methods used to copy objects
+inorder to craete real copies and clones of these objects we can use copy module in python 
+these are two types shallow copy and deep copy changs made in  one object does not reflect to other and 
+/////
+lammda expression is anomynous function tempory fuvntion  and write entire things as single expression
+////
+pass keyword
+////
+import os  module inorder to remove the specified file 
